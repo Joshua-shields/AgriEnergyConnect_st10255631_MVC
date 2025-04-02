@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AgriEnergyConnect_st10255631_MVC/1.0.0": {
+        "runtime": {
+          "AgriEnergyConnect_st10255631_MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AgriEnergyConnect_st10255631_MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
