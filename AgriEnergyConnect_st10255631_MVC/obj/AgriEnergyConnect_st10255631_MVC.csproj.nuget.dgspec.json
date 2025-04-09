@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj": {}
+    "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj": {}
   },
   "projects": {
-    "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj": {
+    "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj",
+        "projectUniqueName": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj",
         "projectName": "AgriEnergyConnect_st10255631_MVC",
-        "projectPath": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj",
+        "projectPath": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC.csproj",
         "packagesPath": "/Users/joshuashields/.nuget/packages/",
-        "outputPath": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC/AgriEnergyConnect_st10255631_MVC/obj/",
+        "outputPath": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/joshuashields/.nuget/NuGet/NuGet.Config"
