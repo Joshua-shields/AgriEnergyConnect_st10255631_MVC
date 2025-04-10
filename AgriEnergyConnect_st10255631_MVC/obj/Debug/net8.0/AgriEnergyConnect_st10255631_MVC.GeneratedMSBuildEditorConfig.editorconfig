@@ -18,16 +18,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Account/loginView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9sb2dpblZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Account/registerView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9yZWdpc3RlclZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Farmer/addFarmerView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFybWVyL2FkZEZhcm1lclZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Product/addProductView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9hZGRQcm9kdWN0Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/Views/Shared/Error.cshtml]
