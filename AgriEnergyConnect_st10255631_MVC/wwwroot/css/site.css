@@ -1,5 +1,8 @@
+/* User's Base CSS - Adapted for Green Theme */
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,15 +11,391 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+/* Adapted focus style to match green theme */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #4caf50; /* Green focus */
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* From user's base */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* General font */
+  color: #333; /* General text color */
+}
+
+/* --- Login Page Styles --- */
+body.login-page {
+  /* Specific body styles for login page if needed, else defaults apply */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e8f5e9; /* Light green background for login */
+  margin: 0; /* Override user's margin-bottom for full page effect */
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  color: #2e7d32; /* Darker green for headings */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #388e3c; /* Medium green for labels */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #a5d6a7; /* Lighter green border */
+  border-radius: 4px;
+  background-color: #f1f8e9; /* Very light green input background */
+}
+
+/* Use general .form-control:focus from user's base if applicable,
+   or keep specific if needed */
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #4caf50; /* Primary green on focus */
+  outline: none;
+  /* box-shadow is handled by the general rule if .form-control class is used */
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #4caf50; /* Primary green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+/* --- Dashboard General Styles (Farmer & Employee) --- */
+body.dashboard-page {
+  margin: 0; /* Reset margin for dashboard pages */
+  background-color: #f0f4f0; /* Light, slightly desaturated green */
+}
+
+.dashboard-container { /* Renamed from .container to avoid conflicts */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header {
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.user-info span {
+  margin-right: 15px;
+}
+
+.logout-button {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Farmer Dashboard Specific Header/Logout */
+body.farmer-dashboard .dashboard-header {
+  background-color: #388e3c; /* Medium-dark green */
+}
+body.farmer-dashboard .logout-button {
+  color: #c8e6c9; /* Light green for contrast */
+  border: 1px solid #c8e6c9;
+}
+body.farmer-dashboard .logout-button:hover {
+  background-color: #c8e6c9;
+  color: #2e7d32; /* Dark green text on hover */
+}
+
+/* Employee Dashboard Specific Header/Logout */
+body.employee-dashboard .dashboard-header {
+  background-color: #2e7d32; /* Darker green for employee header */
+}
+body.employee-dashboard .logout-button {
+  color: #b2dfdb; /* Lighter teal/green for contrast */
+  border: 1px solid #b2dfdb;
+}
+body.employee-dashboard .logout-button:hover {
+  background-color: #b2dfdb;
+  color: #1a531d;
+}
+
+
+.dashboard-section {
+  margin-bottom: 30px;
+  padding: 20px; /* Default padding */
+  border-radius: 6px;
+}
+
+.dashboard-section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Farmer Dashboard Section Styling */
+body.farmer-dashboard .dashboard-section {
+  background-color: #e8f5e9; /* Very light green for section background */
+  border: 1px solid #c8e6c9; /* Light green border */
+}
+body.farmer-dashboard .dashboard-section h2 {
+  color: #2e7d32; /* Dark green */
+  border-bottom: 2px solid #a5d6a7; /* Lighter green underline */
+}
+
+/* Employee Dashboard Section Styling */
+body.employee-dashboard .dashboard-section {
+  padding: 25px; /* Slightly more padding for employee sections */
+  background-color: #e0f2f1; /* Light teal/green for section background */
+  border: 1px solid #a7d7c5; /* Teal/green border */
+}
+body.employee-dashboard .dashboard-section h2 {
+  color: #1a531d; /* Very dark green */
+  border-bottom: 2px solid #81c784; /* Medium green underline */
+}
+
+
+/* General Form Styles within Dashboards */
+.dashboard-section .form-group {
+  margin-bottom: 15px;
+}
+.dashboard-section .form-group.inline-group {
+  display: flex;
+  gap: 20px;
+}
+.dashboard-section .form-group.inline-group > div {
+  flex: 1;
+}
+
+.dashboard-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+body.farmer-dashboard .dashboard-section label {
+  color: #43a047; /* Brighter green for labels */
+}
+body.employee-dashboard .dashboard-section label {
+  color: #388e3c; /* Medium green for labels */
+}
+
+
+.dashboard-section input[type="text"],
+.dashboard-section input[type="number"],
+.dashboard-section input[type="email"],
+.dashboard-section input[type="search"],
+.dashboard-section textarea,
+.dashboard-section select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Input/Textarea/Select styling for Farmer Dashboard */
+body.farmer-dashboard .dashboard-section input[type="text"],
+body.farmer-dashboard .dashboard-section input[type="number"],
+body.farmer-dashboard .dashboard-section textarea {
+  width: calc(100% - 22px); /* Original farmer style had this */
+  border: 1px solid #a5d6a7;
+  background-color: #f1f8e9;
+}
+body.farmer-dashboard .dashboard-section textarea {
+  resize: vertical;
+}
+
+/* Input/Textarea/Select styling for Employee Dashboard */
+body.employee-dashboard .dashboard-section input[type="text"],
+body.employee-dashboard .dashboard-section input[type="email"],
+body.employee-dashboard .dashboard-section input[type="search"],
+body.employee-dashboard .dashboard-section input[type="number"],
+body.employee-dashboard .dashboard-section select {
+  border: 1px solid #a7d7c5;
+  background-color: #f0fff0; /* Honeydew like background */
+}
+
+body.employee-dashboard .dashboard-section select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23388E3C%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+/* Focus for dashboard inputs - can use the general .form-control:focus if inputs have that class */
+.dashboard-section input:focus,
+.dashboard-section textarea:focus,
+.dashboard-section select:focus {
+  border-color: #4caf50; /* Primary green */
+  outline: none;
+  /* box-shadow is handled by the general rule if .form-control class is used */
+}
+
+
+/* Dashboard Buttons */
+.dashboard-section .btn-primary,
+.dashboard-section .btn-secondary {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-section .btn-primary {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Primary green */
+  font-size: 1em;
+}
+.dashboard-section .btn-primary:hover {
+  background-color: #388e3c; /* Darker green */
+}
+
+.dashboard-section .btn-secondary { /* For Employee View/Search buttons */
+  padding: 10px 18px;
+  background-color: #66bb6a; /* Lighter, energetic green */
+  font-size: 0.95em;
+}
+.dashboard-section .btn-secondary:hover {
+  background-color: #4caf50;
+}
+
+
+/* Tables in Dashboards */
+.dashboard-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.dashboard-section th,
+.dashboard-section td {
+  padding: 12px; /* Default padding */
+  text-align: left;
+}
+
+/* Farmer Table Styles */
+body.farmer-dashboard .dashboard-section th,
+body.farmer-dashboard .dashboard-section td {
+  border: 1px solid #c8e6c9; /* Light green border */
+}
+body.farmer-dashboard .dashboard-section th {
+  background-color: #a5d6a7; /* Lighter green for table header */
+  color: #1b5e20; /* Dark green text for header */
+  font-weight: bold;
+}
+body.farmer-dashboard .dashboard-section tr:nth-child(even) {
+  background-color: #f1f8e9; /* Very light green for alternate rows */
+}
+
+/* Farmer Action Links */
+body.farmer-dashboard .action-link,
+body.farmer-dashboard .action-link-delete {
+  text-decoration: none;
+  margin-right: 10px;
+}
+body.farmer-dashboard .action-link {
+  color: #4caf50;
+}
+body.farmer-dashboard .action-link:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+body.farmer-dashboard .action-link-delete {
+  color: #d32f2f; /* Red for delete */
+}
+body.farmer-dashboard .action-link-delete:hover {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+
+
+/* Employee Dashboard - Filter Forms */
+body.employee-dashboard .filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+body.employee-dashboard .filter-form .form-group {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+body.employee-dashboard .filter-form button {
+  flex-shrink: 0;
+}
+
+/* Employee Dashboard - Results Area & Tables within it */
+body.employee-dashboard .results-area {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0fff0; /* Honeydew */
+  border: 1px solid #a7d7c5;
+  border-radius: 4px;
+  min-height: 50px;
+}
+body.employee-dashboard .results-area h3 {
+  color: #2e7d32;
+  margin-top: 0;
+}
+body.employee-dashboard .results-area p {
+  color: #555;
+}
+
+body.employee-dashboard .results-area th,
+body.employee-dashboard .results-area td {
+  border: 1px solid #c8e6c9;
+  padding: 10px;
+}
+body.employee-dashboard .results-area th {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+}
+body.employee-dashboard .results-area tr:nth-child(even) {
+  background-color: #e8f5e9;
 }

@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/obj/Debug/net8.0/scopedcss/projectbundle/AgriEnergyConnect_st10255631_MVC.bundle.scp.css",
-      "PackagePath": "staticwebassets/AgriEnergyConnect_st10255631_MVC.bundle.scp.css"
+      "PackagePath": "staticwebassets/AgriEnergyConnect_st10255631_MVC.wcoz2eon2g.bundle.scp.css"
     },
     {
       "Id": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/wwwroot/css/site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "/Users/joshuashields/RiderProjects/AgriEnergyConnect_st10255631_MVC_GR2/AgriEnergyConnect_st10255631_MVC/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AgriEnergyConnect_st10255631_MVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AgriEnergyConnect_st10255631_MVC.Microsoft.AspNetCore.StaticWebAssets.props",

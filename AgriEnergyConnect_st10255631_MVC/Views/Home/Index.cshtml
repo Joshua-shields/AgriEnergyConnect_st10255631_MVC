@@ -1,30 +1,160 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to Agri-Energy Connect";
 }
 
-<div class="min-vh-100 d-flex flex-column bg-light">
+<div class="bg-light">
     <!-- Hero Section -->
-    <div class="py-5">
+    <section class="py-5 text-center text-lg-start">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-semibold text-dark mb-3">Agri-Energy Connect</h1>
+                    <h1 class="display-4 fw-bold text-dark mb-3">Agri-Energy Connect</h1>
                     <p class="lead text-muted mb-4">
-                      
+                        Bridging sustainable agriculture with innovative green energy solutions.
+                        Connect, collaborate, and cultivate a greener future for farming.
                     </p>
-                    <a href="#features" class="btn btn-dark btn-lg rounded-pill px-4 shadow-sm">Explore Features</a>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+                        <a href="#features" class="btn btn-success btn-lg rounded-pill px-4 me-md-2 shadow-sm">Explore Features</a>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-secondary btn-lg rounded-pill px-4 shadow-sm">Login / Register</a>
+                        }
+                        else
+                        {
+                            @if (User.IsInRole("Farmer"))
+                            {
+                                <a asp-controller="Product" asp-action="FarmerProducts" class="btn btn-outline-primary btn-lg rounded-pill px-4 shadow-sm">My Dashboard</a>
+                            }
+                            else if (User.IsInRole("Employee"))
+                            {
+                                <a asp-controller="Employee" asp-action="Dashboard" class="btn btn-outline-info btn-lg rounded-pill px-4 shadow-sm">Employee Dashboard</a>
+                            }
+                        }
+                    </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <i class="bi bi-leaf-fill text-success" style="font-size: 6rem;"></i>
+           
+                    <img src="~/images/sustainable_farm_energy.png" alt="Sustainable Farming and Green Energy" class="img-fluid rounded shadow-lg" style="max-height: 400px;" />
+               
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Platform Key Features</h2>
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                        <div class="card-body text-center">
+                            <div class="feature-icon-bg bg-success bg-opacity-10 rounded-circle mx-auto mb-3">
+                                <i class="bi bi-tree-fill fs-1 text-success"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Sustainable Farming Hub</h5>
+                            <p class="card-text text-muted">
+                                Access best practices, join forums, and collaborate on sustainable farming techniques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                        <div class="card-body text-center">
+                            <div class="feature-icon-bg bg-warning bg-opacity-10 rounded-circle mx-auto mb-3">
+                                <i class="bi bi-shop fs-1 text-warning"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Green Energy Marketplace</h5>
+                            <p class="card-text text-muted">
+                                Discover and compare green energy solutions tailored for agricultural needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                        <div class="card-body text-center">
+                             <div class="feature-icon-bg bg-info bg-opacity-10 rounded-circle mx-auto mb-3">
+                                <i class="bi bi-mortarboard-fill fs-1 text-info"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Educational Resources</h5>
+                            <p class="card-text text-muted">
+                                Engage with online courses, webinars, and workshops on green tech in agriculture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Feature 4  -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                        <div class="card-body text-center">
+                             <div class="feature-icon-bg bg-primary bg-opacity-10 rounded-circle mx-auto mb-3">
+                                <i class="bi bi-people-fill fs-1 text-primary"></i>
+                            </div>
+                            <h5 class="card-title fw-semibold">Project Collaboration</h5>
+                            <p class="card-text text-muted">
+                                Connect with experts, propose joint projects, and find funding opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-success text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Ready to Grow a Greener Tomorrow?</h2>
+            <p class="lead mb-4">Join our community of forward-thinking farmers and energy experts.</p>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Account" asp-action="Login" class="btn btn-light btn-lg rounded-pill px-5 shadow">Get Started</a>
+            }
+            else
+            {
+                 <a href="#features" class="btn btn-light btn-lg rounded-pill px-5 shadow">Learn More</a>
+            }
+        </div>
+    </section>
 </div>
 
 
+@section Styles { 
+<style>
+    .feature-icon-bg {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .hover-shadow {
+        transition: box-shadow .3s ease-in-out;
+    }
+    .hover-shadow:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
 
-    
+   
+    .hero-image-placeholder {
+        background-color: #e9ecef; 
+        width: 100%;
+        height: 300px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .3rem;
+        font-size: 1.5rem;
+        color: #6c757d; /* Muted text */
+    }
+</style>
+}
+ 
 
 <!--------------------------------------------end of file............................................>
