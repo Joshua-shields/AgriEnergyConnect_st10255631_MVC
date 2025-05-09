@@ -6,7 +6,11 @@ namespace AgriEnergyConnect_st10255631_MVC.Repositories
     public interface IUserRepository
     {
         Task<User?> GetUserByUsernameAsync(string username);
-        Task<User?> GetUserByIdAsync(int userId); 
+        Task<User?> GetUserByIdAsync(int userId);
+        Task AddUserAsync(User user);
+
      
     }
 }
+
+/////////////////////////////////////////////////////////END OF FILE/////////////////////////////////////////////////////////

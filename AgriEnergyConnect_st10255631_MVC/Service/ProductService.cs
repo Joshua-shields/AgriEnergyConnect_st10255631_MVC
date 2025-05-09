@@ -61,6 +61,11 @@ namespace AgriEnergyConnect_st10255631_MVC.Services
            
             await _productRepository.UpdateProductAsync(product);
         }
+        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        {
+            return await _productRepository.GetAllProductsAsync();
+        }
+
     }
 }
 

@@ -5,12 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AgriEnergyConnect</title>
+    @* --- Stylesheets --- *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     @* Added Bootstrap Icons CSS for the homepage icons *@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AgriEnergyConnect_st10255631_MVC.styles.css" asp-append-version="true" />
-    @* This line renders the @section Styles { ... } from your views *@
+    @* This line renders the @section Styles { ... } from specific views *@
     @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
@@ -23,6 +24,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @* --- Left Navigation --- *@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -30,6 +32,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @* --- Role-Specific Navigation --- *@
                         @if (User.Identity.IsAuthenticated)
                         {
                             if (User.IsInRole("Farmer"))
@@ -46,6 +49,7 @@
                             }
                         }
                     </ul>
+                    @* --- Right Navigation (Login/Logout) --- *@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -53,7 +57,7 @@
                                 <span class="navbar-text text-dark me-3">Hello @User.Identity.Name! (@User.FindFirstValue(ClaimTypes.Role))</span>
                             </li>
                             <li class="nav-item">
-                                <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm"> @* Removed class="form-inline" as it's less common with Bootstrap 5 navs *@
+                                <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
                                     @Html.AntiForgeryToken()
                                     <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                                 </form>
@@ -61,7 +65,6 @@
                         }
                         else
                         {
-                           
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
@@ -71,20 +74,26 @@
             </div>
         </nav>
     </header>
+
+    @* --- Main Content Area --- *@
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() @* Renders the content of the specific view *@
         </main>
     </div>
 
+    @* --- Footer --- *@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; @DateTime.Now.Year - AgriEnergyConnect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    @* --- Scripts --- *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @* This line renders the @section Scripts { ... } from specific views *@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

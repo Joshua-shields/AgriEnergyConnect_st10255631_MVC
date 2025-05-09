@@ -7,12 +7,21 @@ namespace AgriEnergyConnect_st10255631_MVC.Repositories
 {
     public class FarmerRepository : IFarmerRepository
     {
+        
         private readonly ApplicationDbContext _context;
 
         public FarmerRepository(ApplicationDbContext context)
         {
             _context = context;
         }
+        
+        public async Task<IEnumerable<Farmer>> GetAllFarmersAsync()
+        {
+            return await _context.Farmers
+                .OrderBy(f => f.Name)
+                .ToListAsync();
+        }
+
 
         public async Task<Farmer?> GetFarmerByUserIdAsync(int userId)
         {
