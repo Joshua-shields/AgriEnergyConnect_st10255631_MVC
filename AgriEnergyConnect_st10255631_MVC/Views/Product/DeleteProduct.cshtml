@@ -1,0 +1,17 @@
+@model AgriEnergyConnect_st10255631_MVC.Models.Product
+
+@{
+    ViewData["Title"] = "Delete Product";
+    Layout = "_Layout";
+}
+
+<h2>Delete Product</h2>
+<div class="alert alert-warning">
+    Are you sure you want to delete <strong>@Model.Name</strong>?
+</div>
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="FarmerProducts" class="btn btn-secondary">Cancel</a>
+</form>

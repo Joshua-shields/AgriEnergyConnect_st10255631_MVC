@@ -15,6 +15,10 @@ namespace AgriEnergyConnect_st10255631_MVC.Services
       
         Task UpdateProductAsync(Product product);
         Task<IEnumerable<Product>> GetAllProductsAsync();
+        
+        Task DeleteProductAsync(int productId);
+
 
     }
 }
+////////////////////////////////////////////////////////////END OF FILE////////////////////////////////////////////////////////////

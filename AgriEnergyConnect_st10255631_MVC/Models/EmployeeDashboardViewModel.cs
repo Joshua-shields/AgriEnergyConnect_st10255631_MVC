@@ -26,3 +26,5 @@ namespace AgriEnergyConnect_st10255631_MVC.Models
         public IEnumerable<Product> Products { get; set; } = new List<Product>(); // List of products to show
     }
 }
+
+////////////////////////////////////////////////////////////END OF FILE////////////////////////////////////////////////////////////

@@ -1,7 +1,5 @@
+using AgriEnergyConnect_st10255631_MVC.Models; 
 
-
-using AgriEnergyConnect_st10255631_MVC.Models; // Or your correct models namespace
-// using AgriEnergyConnect.Models; // Remove this if the one above is correct
 using Microsoft.EntityFrameworkCore;
 
 namespace AgriEnergyConnect_st10255631_MVC.Data;
@@ -128,3 +126,4 @@ public class ApplicationDbContext : DbContext
         );
     }
 }
+////////////////////////////////////////////////////////////END OF FILE////////////////////////////////////////////////////////////

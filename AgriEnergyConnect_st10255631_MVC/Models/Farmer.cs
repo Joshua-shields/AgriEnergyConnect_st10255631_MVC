@@ -22,9 +22,11 @@ namespace AgriEnergyConnect_st10255631_MVC.Models
         public int UserId { get; set; }
 
         [ForeignKey("UserId")]
-        public virtual User User { get; set; } // User class needs to be in this namespace or imported
+        public virtual User User { get; set; } 
 
         // Navigation property: A farmer can have many products
-        public virtual ICollection<Product> Products { get; set; } = new List<Product>(); // Product class needs to be in this namespace or imported
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
+
+////////////////////////////////////////////////////////////END OF FILE////////////////////////////////////////////////////////////

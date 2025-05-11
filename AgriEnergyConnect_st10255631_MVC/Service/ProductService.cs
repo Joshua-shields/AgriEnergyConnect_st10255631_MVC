@@ -65,7 +65,13 @@ namespace AgriEnergyConnect_st10255631_MVC.Services
         {
             return await _productRepository.GetAllProductsAsync();
         }
+        public async Task DeleteProductAsync(int productId)
+        {
+            await _productRepository.DeleteProductAsync(productId);
+        }
+
 
     }
 }
+////////////////////////////////////////////////////////////END OF FILE////////////////////////////////////////////////////////////
 
