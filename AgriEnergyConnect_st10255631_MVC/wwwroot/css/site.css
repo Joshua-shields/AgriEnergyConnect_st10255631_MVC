@@ -1,8 +1,9 @@
-/* User's Base CSS - Adapted for Green Theme */
+
 html {
   font-size: 14px;
   position: relative;
   min-height: 100%;
+  background-color: #E5DBCB; /* Soft beige background */
 }
 
 @media (min-width: 768px) {
@@ -24,17 +25,17 @@ body {
   margin-bottom: 60px; /* From user's base */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* General font */
   color: #333; /* General text color */
+  background-color: #E5DBCB; /* Soft beige background */
 }
 
 /* --- Login Page Styles --- */
 body.login-page {
-  /* Specific body styles for login page if needed, else defaults apply */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #e8f5e9; /* Light green background for login */
-  margin: 0; /* Override user's margin-bottom for full page effect */
+  background-color: #E5DBCB; /* Soft beige background for login */
+  margin: 0;
 }
 
 .login-container {
@@ -47,7 +48,7 @@ body.login-page {
 }
 
 .login-container h2 {
-  color: #2e7d32; /* Darker green for headings */
+  color: #2e7d32;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -60,7 +61,7 @@ body.login-page {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #388e3c; /* Medium green for labels */
+  color: #388e3c;
 }
 
 .login-container input[type="text"],
@@ -68,24 +69,21 @@ body.login-page {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #a5d6a7; /* Lighter green border */
+  border: 1px solid #a5d6a7;
   border-radius: 4px;
-  background-color: #f1f8e9; /* Very light green input background */
+  background-color: #f1f8e9;
 }
 
-/* Use general .form-control:focus from user's base if applicable,
-   or keep specific if needed */
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
-  border-color: #4caf50; /* Primary green on focus */
+  border-color: #4caf50;
   outline: none;
-  /* box-shadow is handled by the general rule if .form-control class is used */
 }
 
 .login-container button {
   width: 100%;
   padding: 12px 15px;
-  background-color: #4caf50; /* Primary green */
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
@@ -95,16 +93,16 @@ body.login-page {
 }
 
 .login-container button:hover {
-  background-color: #388e3c; /* Darker green on hover */
+  background-color: #388e3c;
 }
 
-/* --- Dashboard General Styles (Farmer & Employee) --- */
+
 body.dashboard-page {
-  margin: 0; /* Reset margin for dashboard pages */
-  background-color: #f0f4f0; /* Light, slightly desaturated green */
+  margin: 0;
+  background-color: #E5DBCB; /* Soft beige background for dashboard */
 }
 
-.dashboard-container { /* Renamed from .container to avoid conflicts */
+.dashboard-container {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
@@ -140,23 +138,23 @@ body.dashboard-page {
 
 /* Farmer Dashboard Specific Header/Logout */
 body.farmer-dashboard .dashboard-header {
-  background-color: #388e3c; /* Medium-dark green */
+  background-color: #388e3c;
 }
 body.farmer-dashboard .logout-button {
-  color: #c8e6c9; /* Light green for contrast */
+  color: #c8e6c9;
   border: 1px solid #c8e6c9;
 }
 body.farmer-dashboard .logout-button:hover {
   background-color: #c8e6c9;
-  color: #2e7d32; /* Dark green text on hover */
+  color: #2e7d32;
 }
 
 /* Employee Dashboard Specific Header/Logout */
 body.employee-dashboard .dashboard-header {
-  background-color: #2e7d32; /* Darker green for employee header */
+  background-color: #2e7d32;
 }
 body.employee-dashboard .logout-button {
-  color: #b2dfdb; /* Lighter teal/green for contrast */
+  color: #b2dfdb;
   border: 1px solid #b2dfdb;
 }
 body.employee-dashboard .logout-button:hover {
@@ -164,10 +162,9 @@ body.employee-dashboard .logout-button:hover {
   color: #1a531d;
 }
 
-
 .dashboard-section {
   margin-bottom: 30px;
-  padding: 20px; /* Default padding */
+  padding: 20px;
   border-radius: 6px;
 }
 
@@ -179,27 +176,25 @@ body.employee-dashboard .logout-button:hover {
 
 /* Farmer Dashboard Section Styling */
 body.farmer-dashboard .dashboard-section {
-  background-color: #e8f5e9; /* Very light green for section background */
-  border: 1px solid #c8e6c9; /* Light green border */
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
 }
 body.farmer-dashboard .dashboard-section h2 {
-  color: #2e7d32; /* Dark green */
-  border-bottom: 2px solid #a5d6a7; /* Lighter green underline */
+  color: #2e7d32;
+  border-bottom: 2px solid #a5d6a7;
 }
 
 /* Employee Dashboard Section Styling */
 body.employee-dashboard .dashboard-section {
-  padding: 25px; /* Slightly more padding for employee sections */
-  background-color: #e0f2f1; /* Light teal/green for section background */
-  border: 1px solid #a7d7c5; /* Teal/green border */
+  padding: 25px;
+  background-color: #e0f2f1;
+  border: 1px solid #a7d7c5;
 }
 body.employee-dashboard .dashboard-section h2 {
-  color: #1a531d; /* Very dark green */
-  border-bottom: 2px solid #81c784; /* Medium green underline */
+  color: #1a531d;
+  border-bottom: 2px solid #81c784;
 }
 
-
-/* General Form Styles within Dashboards */
 .dashboard-section .form-group {
   margin-bottom: 15px;
 }
@@ -217,12 +212,11 @@ body.employee-dashboard .dashboard-section h2 {
   font-weight: bold;
 }
 body.farmer-dashboard .dashboard-section label {
-  color: #43a047; /* Brighter green for labels */
+  color: #43a047;
 }
 body.employee-dashboard .dashboard-section label {
-  color: #388e3c; /* Medium green for labels */
+  color: #388e3c;
 }
-
 
 .dashboard-section input[type="text"],
 .dashboard-section input[type="number"],
@@ -236,11 +230,10 @@ body.employee-dashboard .dashboard-section label {
   box-sizing: border-box;
 }
 
-/* Input/Textarea/Select styling for Farmer Dashboard */
 body.farmer-dashboard .dashboard-section input[type="text"],
 body.farmer-dashboard .dashboard-section input[type="number"],
 body.farmer-dashboard .dashboard-section textarea {
-  width: calc(100% - 22px); /* Original farmer style had this */
+  width: calc(100% - 22px);
   border: 1px solid #a5d6a7;
   background-color: #f1f8e9;
 }
@@ -248,36 +241,31 @@ body.farmer-dashboard .dashboard-section textarea {
   resize: vertical;
 }
 
-/* Input/Textarea/Select styling for Employee Dashboard */
 body.employee-dashboard .dashboard-section input[type="text"],
 body.employee-dashboard .dashboard-section input[type="email"],
 body.employee-dashboard .dashboard-section input[type="search"],
 body.employee-dashboard .dashboard-section input[type="number"],
 body.employee-dashboard .dashboard-section select {
   border: 1px solid #a7d7c5;
-  background-color: #f0fff0; /* Honeydew like background */
+  background-color: #f0fff0;
 }
 
 body.employee-dashboard .dashboard-section select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23388E3C%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23388E3C%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
   padding-right: 30px;
 }
 
-/* Focus for dashboard inputs - can use the general .form-control:focus if inputs have that class */
 .dashboard-section input:focus,
 .dashboard-section textarea:focus,
 .dashboard-section select:focus {
-  border-color: #4caf50; /* Primary green */
+  border-color: #4caf50;
   outline: none;
-  /* box-shadow is handled by the general rule if .form-control class is used */
 }
 
-
-/* Dashboard Buttons */
 .dashboard-section .btn-primary,
 .dashboard-section .btn-secondary {
   color: white;
@@ -289,113 +277,76 @@ body.employee-dashboard .dashboard-section select {
 
 .dashboard-section .btn-primary {
   padding: 10px 20px;
-  background-color: #4caf50; /* Primary green */
-  font-size: 1em;
-}
-.dashboard-section .btn-primary:hover {
-  background-color: #388e3c; /* Darker green */
-}
-
-.dashboard-section .btn-secondary { /* For Employee View/Search buttons */
-  padding: 10px 18px;
-  background-color: #66bb6a; /* Lighter, energetic green */
-  font-size: 0.95em;
-}
-.dashboard-section .btn-secondary:hover {
   background-color: #4caf50;
 }
 
 
-/* Tables in Dashboards */
-.dashboard-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-.dashboard-section th,
-.dashboard-section td {
-  padding: 12px; /* Default padding */
-  text-align: left;
+.navbar-lightgreen {
+  background-color: #d4edda !important; /* Light green */
+  border-bottom: 1px solid #b7dfb7;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.03);
 }
 
-/* Farmer Table Styles */
-body.farmer-dashboard .dashboard-section th,
-body.farmer-dashboard .dashboard-section td {
-  border: 1px solid #c8e6c9; /* Light green border */
-}
-body.farmer-dashboard .dashboard-section th {
-  background-color: #a5d6a7; /* Lighter green for table header */
-  color: #1b5e20; /* Dark green text for header */
+/* Navbar brand/logo */
+.navbar-lightgreen .navbar-brand {
+  color: #155724 !important;
   font-weight: bold;
-}
-body.farmer-dashboard .dashboard-section tr:nth-child(even) {
-  background-color: #f1f8e9; /* Very light green for alternate rows */
+  letter-spacing: 0.5px;
 }
 
-/* Farmer Action Links */
-body.farmer-dashboard .action-link,
-body.farmer-dashboard .action-link-delete {
+.navbar-lightgreen .navbar-brand:hover,
+.navbar-lightgreen .navbar-brand:focus {
+  color: #0b2e13 !important;
   text-decoration: none;
-  margin-right: 10px;
 }
-body.farmer-dashboard .action-link {
-  color: #4caf50;
+
+/* Navbar links */
+.navbar-lightgreen .nav-link,
+.navbar-lightgreen .navbar-text,
+.navbar-lightgreen .btn-link {
+  color: #155724 !important;
+  transition: color 0.2s;
 }
-body.farmer-dashboard .action-link:hover {
+
+.navbar-lightgreen .nav-link:hover,
+.navbar-lightgreen .nav-link:focus,
+.navbar-lightgreen .btn-link:hover,
+.navbar-lightgreen .btn-link:focus {
+  color: #388e3c !important;
   text-decoration: underline;
-  color: #2e7d32;
 }
-body.farmer-dashboard .action-link-delete {
-  color: #d32f2f; /* Red for delete */
+
+/* Active link */
+.navbar-lightgreen .nav-link.active {
+  color: #388e3c !important;
+  font-weight: 600;
 }
-body.farmer-dashboard .action-link-delete:hover {
-  color: #b71c1c;
+
+/* Navbar toggler (hamburger) */
+.navbar-lightgreen .navbar-toggler {
+  border-color: #a5d6a7;
+}
+
+.navbar-lightgreen .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(21,87,36,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar form button (logout) */
+.navbar-lightgreen .btn-link.nav-link {
+  color: #155724 !important;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.navbar-lightgreen .btn-link.nav-link:hover {
+  color: #388e3c !important;
   text-decoration: underline;
 }
 
 
-/* Employee Dashboard - Filter Forms */
-body.employee-dashboard .filter-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  align-items: flex-end;
-  margin-bottom: 20px;
-}
-body.employee-dashboard .filter-form .form-group {
-  flex-grow: 1;
-  margin-bottom: 0;
-}
-body.employee-dashboard .filter-form button {
-  flex-shrink: 0;
-}
-
-/* Employee Dashboard - Results Area & Tables within it */
-body.employee-dashboard .results-area {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f0fff0; /* Honeydew */
-  border: 1px solid #a7d7c5;
-  border-radius: 4px;
-  min-height: 50px;
-}
-body.employee-dashboard .results-area h3 {
-  color: #2e7d32;
-  margin-top: 0;
-}
-body.employee-dashboard .results-area p {
-  color: #555;
-}
-
-body.employee-dashboard .results-area th,
-body.employee-dashboard .results-area td {
-  border: 1px solid #c8e6c9;
-  padding: 10px;
-}
-body.employee-dashboard .results-area th {
-  background-color: #a5d6a7;
-  color: #1b5e20;
-}
-body.employee-dashboard .results-area tr:nth-child(even) {
-  background-color: #e8f5e9;
+@media (max-width: 575.98px) {
+  .navbar-lightgreen .navbar-nav .nav-link,
+  .navbar-lightgreen .navbar-nav .navbar-text {
+    color: #155724 !important;
+  }
 }

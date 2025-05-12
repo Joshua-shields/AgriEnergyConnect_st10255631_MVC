@@ -17,7 +17,7 @@
                         <a href="#features" class="btn btn-success btn-lg rounded-pill px-4 me-md-2 shadow-sm">Explore Features</a>
                         @if (!User.Identity.IsAuthenticated)
                         {
-                            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-secondary btn-lg rounded-pill px-4 shadow-sm">Login / Register</a>
+                            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-secondary btn-lg rounded-pill px-4 shadow-sm">Login</a>
                         }
                         else
                         {
@@ -34,7 +34,8 @@
                 </div>
                 <div class="col-lg-6 text-center">
            
-                    <img src="~/Image/LOGO.png" alt="Agri-Energy Connect Logo" class="img-fluid" style="max-height: 60px;" />
+                    <img src="Image/LOGO.PNG" alt="Agri-Energy Connect Logo" class="img-fluid" style="max-height: 180px;" />
+               
                
                 </div>
             </div>

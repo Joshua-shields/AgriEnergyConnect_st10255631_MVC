@@ -22,4 +22,8 @@
       <Folder Include="Views\Farmer\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="wwwroot\Image\LOGO.png" />
+    </ItemGroup>
+
 </Project>
